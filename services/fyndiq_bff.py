@@ -11,6 +11,7 @@ def search(keyword: str) -> list:
     products = response.json()["productListWithCount"]["articles"][:10]
     return [
         dict(
+            id=product["product_id"],
             url=f'{FYNDIQ_URL}{product["article_url"]}',
             image_url=product["images"][0]["url"],
         )
