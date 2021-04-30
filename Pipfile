@@ -16,6 +16,7 @@ flake8 = "*"
 jedi = "==0.17.2"
 black = "*"
 ipython = "*"
+pdbpp = ""
 
 [requires]
 python_version = "3.8"
