@@ -9,6 +9,7 @@ uvicorn = "*"
 python-multipart = "*"
 requests = "*"
 python-dotenv = "*"
+google-cloud-vision = "*"
 
 [dev-packages]
 flake8 = "*"
