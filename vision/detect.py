@@ -1,16 +1,10 @@
+from typing import List
+
 from google.cloud import vision
 from google.cloud.vision_v1 import AnnotateImageResponse
 
 
-async def async_detect_image(base64_image):
-    client = vision.ImageAnnotatorAsyncClient()
-
-    response = await client.batch_annotate_images(
-
-    )
-
-
-def detect_product(image_bytes):
+def detect_product(image_bytes) -> List[str]:
     client = vision.ImageAnnotatorClient()
 
     image = vision.Image(content=image_bytes)
@@ -23,4 +17,4 @@ def detect_product(image_bytes):
             'https://cloud.google.com/apis/design/errors'.format(
                 response.error.message))
 
-    return response.label_annotations
+    return [label.description for label in response.label_annotations]

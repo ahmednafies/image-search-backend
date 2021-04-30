@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-BFF_URL = "https://search-bff.fyndiq.se/search/result?q={query}"
+BFF_URL = "https://search-bff.fyndiq.se/search/result?{query}"
 FYNDIQ_URL = "https://fyndiq.se"
 APPTUS_CONF = {
     "apptus-customerkey": os.environ["APPTUS_CUSTOMER_KEY"],
