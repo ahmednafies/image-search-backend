@@ -7,11 +7,13 @@ name = "pypi"
 fastapi = "*"
 uvicorn = "*"
 python-multipart = "*"
+requests = "*"
 
 [dev-packages]
 flake8 = "*"
 jedi = "==0.17.2"
 black = "*"
+ipython = "*"
 
 [requires]
 python_version = "3.8"
