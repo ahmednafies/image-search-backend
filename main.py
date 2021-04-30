@@ -27,7 +27,7 @@ async def upload_image(body: UploadImage):
     decoded_image = base64.b64decode(body.image)
     labels = detect_product(decoded_image)
     res = search(labels[0])
-    return {"products": res}
+    return {"products": res, "label": labels[0]}
 
 
 @app.get("/health/")
