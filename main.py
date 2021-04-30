@@ -1,14 +1,8 @@
 import uvicorn
 from fastapi import FastAPI, File, UploadFile
-from pydantic import BaseModel
-
-from typing import List
+from services.fyndiq_bff import FyndiqBff
 
 app = FastAPI()
-
-
-class ProductList(BaseModel):
-    products: List[str]
 
 
 @app.post("/image-search/")
