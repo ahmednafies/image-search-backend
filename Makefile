@@ -1,5 +1,7 @@
-run:
-	docker-compose up
+setup:
+	pipenv install --dev --pre 
 
-build:
-	docker-compose build
+run:
+	docker-compose up --build
+
+
