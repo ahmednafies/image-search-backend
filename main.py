@@ -1,7 +1,14 @@
 import uvicorn
 from fastapi import FastAPI, File, UploadFile
+from pydantic import BaseModel
+
+from typing import List
 
 app = FastAPI()
+
+
+class ProductList(BaseModel):
+    products: List[str]
 
 
 @app.post("/image-search/")
