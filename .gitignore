@@ -119,3 +119,4 @@ ENV/
 .idea
 .cicd
 .vim
+credentials.json
